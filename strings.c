@@ -8,37 +8,37 @@ int main()
 {
     char s1[50],s2[50],s3[50],s4[50];
     printf("Digite uma string: ");
-    scanf("%[^\n]",s1);
+    scanf("%[^\n]",s1);                 // faz a leitura até a quebra de linha (enter)
 
-    int its2=0, its3=0, its4=0;
+    int its2=0, its3=0, its4=0;         // criação das variaveis iteradoras do codigo
 
     for (int i = 0; i < strlen(s1); i++)
     {
 
         if (s1[i] >= 97 && s1[i] <=122)
         {
-            s2[i]=s1[i]; //s2[0]='\0'
+            s2[its2]=s1[i];                //s2 vai receber as letras minusculas
             its2++;
-            s4[its4]=s1[i]-32;
+            s4[its4]=s1[i]-32;              //s4 vai receber as letras maiuscula após terem sido convertidas
             its4++;
         }
         if (s1[i]>=65 && s1[i]<=90)
         {
-            s3[its3]=s1[i];
+            s3[its3]=s1[i];             //s3 recebe somente as letras maiusculas
             its3++;
-            s4[its4]=s1[i];
+            s4[its4]=s1[i];             //s4 recebe as letras maiusculas sem tratamento pois nao é necessário
             its4++;
         }
         if (s1[i]==' ')
         {
-            s4[its4]=' ';
+            s4[its4]=' ';           // coloca os espaços em s4
             its4++;
         }
         
     }
     s4[its4]='\0';
     puts(s1);
-    puts(s2);
+    puts(s2);           //printa as strings
     puts(s3);
     puts(s4);
 }
