@@ -88,6 +88,8 @@ int main(void){
     
     
     //esse aqui envolve ponteiros mais explicitamente, quem se arrisca?
+
+
     /*fp2 = fopen("file2", "r");
     int *resultado = (int*) malloc(2*sizeof(int)); //aloca 2 inteiros de memoria
     while(fread(resultado, 1, sizeof(int),fp2)){
